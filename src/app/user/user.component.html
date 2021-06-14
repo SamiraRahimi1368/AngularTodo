@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Todo app</title>
+</head>
+
+<body>
+    <div class="row">
+        <form>
+            <div class="row col s6">
+
+                <div class="input-field col s10">
+
+                    <textarea #textarea1 class="materialize-textarea"></textarea>
+
+                    <label for="textarea1">What needs to be done ?</label>
+                </div>
+            </div>
+        </form>
+        <br>
+        <div class="row col s6">
+            <a class="waves-effect waves-light btn" (click)="getVal(textarea1.value)"  ><i class="material-icons left" >add_circle</i>Add</a>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="row col s9">
+            <ul class="collection with-header">
+                <li class="collection-header">
+                    <h4>Todo List</h4>
+                  
+                    <form>
+                        <div class="input-field">
+                          <input id="search" type="search" required>
+                          <label class="label-icon" for="search"><i class="material-icons">search</i>Search</label>
+                          <i class="material-icons">close</i>
+                        </div>
+                      </form>
+                </li>
+                <label>
+                    <li class="collection-item">
+
+                        <input type="checkbox" />
+                        <span>{{currentVal}}</span>
+                        <span><a href="#!" class="secondary-content"><i class="material-icons">delete</i><i
+                                    class="material-icons">check_circle</i></a></span>
+                    </li>
+
+                </label>
+              
+                
+               
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
